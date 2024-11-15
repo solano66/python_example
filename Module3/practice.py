@@ -5,7 +5,19 @@
 # 數字太小 要提示「請輸入更大的數字」
 # 使用者猜對要回傳「恭喜中獎」
 
-
+ans = 36
+while True:
+    num = int(input("請輸入1~100的數字:"))
+    if num < 1 or num > 100:
+        continue
+    if num == ans:
+        print("正確，密碼是" + str(ans))
+        break
+    elif num > ans:
+        print("還要更小")
+    else:
+        print("還要更大")
+    
 
 
 
