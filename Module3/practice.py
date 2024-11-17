@@ -6,8 +6,14 @@
 # 使用者猜對要回傳「恭喜中獎」
 
 ans = 36
+
 while True:
-    num = int(input("請輸入1~100的數字:"))
+    try:
+        num = int(input("請輸入1~100的數字:"))
+    except ValueError:
+        print("內容錯誤，請輸入數字")
+        continue
+
     if num < 1 or num > 100:
         continue
     if num == ans:
@@ -17,6 +23,7 @@ while True:
         print("還要更小")
     else:
         print("還要更大")
+
     
 
 
